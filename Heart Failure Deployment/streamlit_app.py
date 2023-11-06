@@ -6,7 +6,7 @@ import string
 model = pickle.load(open('knn.pkl', 'rb'))
 
 def main():
-    st.title('THeart Failure Prediction Model')
+    st.title('Heart Failure Prediction Model')
 
     #input variables
     Age = st.text_input('Input your age')
