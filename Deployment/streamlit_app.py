@@ -2,6 +2,9 @@ import streamlit as st
 import numpy as np
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, StandardScaler
 
+with open('heartfailuremodel.pkl', 'rb') as model_file:
+    classifier_KNN = pickle.load(model_file)
+
 # Define the encoders and scaler
 enc_oe = OrdinalEncoder()
 enc_ohe = OneHotEncoder()
