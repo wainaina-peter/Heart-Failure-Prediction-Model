@@ -12,9 +12,7 @@ enc_oe = OrdinalEncoder()
 enc_ohe = OneHotEncoder()
 scaler = StandardScaler()
 
-def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler):
-    import pandas as pd
-    
+def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler): 
     # Create a DataFrame from the input data
     input_df = pd.DataFrame([input_data])
 
