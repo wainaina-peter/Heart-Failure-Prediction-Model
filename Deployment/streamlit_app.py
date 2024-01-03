@@ -3,10 +3,10 @@ import numpy as np
 import streamlit as st
 import os
 import string
-model = pickle.load(open('knn.pkl', 'rb'))
+model = pickle.load(open('heartfailuremodel.pkl', 'rb'))
 
 def main():
-    st.title('THeart Failure Prediction Model')
+    st.title('Heart Failure Prediction Model')
 
     #input variables
     Age = st.text_input('Input your age')
