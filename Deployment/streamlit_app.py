@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pickle
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, StandardScaler
 
 with open('heartfailuremodel.pkl', 'rb') as model_file:
