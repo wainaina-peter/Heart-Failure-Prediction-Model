@@ -21,13 +21,12 @@ def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler)
 
     # Transform categorical columns using OrdinalEncoder
     binary_var = ['Sex', 'FastingBS', 'ExerciseAngina', 'RestingECG']
-    enc_oe.fit(input_df[binary_var])
-    input_df[binary_var] = enc_oe.transform(input_df[binary_var])
+    input_df[binary_var] = enc_oe.fit_transform(input_df[binary_var])
 
     # Transform 'ChestPainType' and 'ST_Slope' using OneHotEncoder
     multi_categ = ['ChestPainType', 'ST_Slope']
-    transformed = pd.DataFrame(enc_ohe.transform(input_df[multi_categ]).toarray(), columns=enc_ohe.get_feature_names_out(multi_categ))
-    input_df = pd.concat([input_df, transformed], axis=1).drop(multi_categ, axis=1)
+    transformed_columns = pd.DataFrame(enc_ohe.transform(input_df[multi_categ]).toarray(), columns=enc_ohe.get_feature_names_out(multi_categ))
+    input_df = pd.concat([input_df, transformed_columns], axis=1).drop(multi_categ, axis=1)
 
     # Define the numeric variables
     numeric_vars = ['Age', 'RestingBP', 'Cholesterol', 'MaxHR', 'Oldpeak']
