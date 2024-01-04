@@ -12,7 +12,7 @@ enc_oe = OrdinalEncoder()
 enc_ohe = OneHotEncoder()
 scaler = StandardScaler()
 
-training_data = pd.read_csv('training_data.csv')
+training_data = pd.read_csv('heart.csv')
 
 # Fit encoders with training data
 binary_var = ['Sex', 'FastingBS', 'ExerciseAngina', 'RestingECG']
