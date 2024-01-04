@@ -57,7 +57,7 @@ def main():
     # Input widgets for user input
     Age = st.number_input('Enter your age', min_value=0, max_value=120, value=25)
     Sex = st.selectbox('Select your gender', ['Male', 'Female'])
-    ChestPainType = st.selectbox('Select your chest pain type', ['Typical Angina', 'Atypical Angina', 'Non-anginal Pain', 'Asymptomatic'])
+    ChestPainType = st.selectbox('Select your chest pain type', ['TA', 'ATA', 'NAP', 'ASY'])
     RestingBP = st.number_input('Enter your resting blood pressure (mm Hg)', min_value=0, value=120)
     Cholesterol = st.number_input('Enter your cholesterol level (mg/dl)', min_value=0, value=200)
     FastingBS = st.selectbox('Is your fasting blood sugar > 120 mg/dl?', ['Yes', 'No'])
