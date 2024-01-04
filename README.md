@@ -8,7 +8,9 @@ Can one utilize already existing clinical data of heart patients to intelligentl
 
 ## Problem Statement
 Heart failure is a serious health problem that many people experience and most of the time it comes at a surprise to learn that the issue had been underlying for years without being detected or it had been misdiagnosed for another disease.
+
 As highlighted by Heartfoundation.org, heart failure is responsible for a significant number of deaths, with one person succumbing to heart failure every three hours, amounting to eight deaths per day. These alarming statistics underscore the urgent need for improved methods of detection and management. 
+
 My goal is to create a machine learning model for predicting heart failure and as a result help in early diagnosis and improved onset treatment.
 
 ## Aims and objectives
