@@ -91,8 +91,13 @@ def main():
         }
 
         # Make predictions
-        predicted_heart_disease_knn_preprocessed = make_prediction_knn_preprocessed(classifier_KNN, input_data, enc_oe, enc_ohe, scaler)
-        st.success('The predicted result is {}'.format(predicted_heart_disease_knn_preprocessed))
+        predicted_heart_disease_knn_preprocessed = make_prediction_knn_preprocessed(classifier_KNN, input_data, enc_oe, enc_ohe, scaler, training_data)
+        # st.success('The predicted result is {}'.format(predicted_heart_disease_knn_preprocessed))
+        # Print result based on predicted value
+        if predicted_heart_disease_knn_preprocessed == 1:
+            st.warning('There is a possibility of heart failure.')
+        else:
+            st.success('There is no possibility of heart failure.')
 
 if __name__ == "__main__":
     main()
