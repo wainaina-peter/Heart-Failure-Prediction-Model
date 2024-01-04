@@ -21,6 +21,10 @@ enc_oe.fit(training_data[binary_var])
 multi_categ = ['ChestPainType', 'ST_Slope']
 enc_ohe.fit(training_data[multi_categ])
 
+# Fit StandardScaler with numeric variables
+numeric_vars = ['Age', 'RestingBP', 'Cholesterol', 'MaxHR', 'Oldpeak']
+scaler.fit(training_data[numeric_vars])
+
 def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler): 
     # Create a DataFrame from the input data
     input_df = pd.DataFrame([input_data])
