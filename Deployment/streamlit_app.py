@@ -65,7 +65,7 @@ def main():
     MaxHR = st.number_input('Enter your maximum heart rate', min_value=0, value=150)
     ExerciseAngina = st.selectbox('Do you experience exercise-induced angina?', ['Yes', 'No'])
     Oldpeak = st.number_input('Enter your ST depression induced by exercise relative to rest', value=0.0)
-    ST_Slope = st.selectbox('Select your slope of the peak exercise ST segment', ['Upsloping', 'Flat', 'Downsloping'])
+    ST_Slope = st.selectbox('Select your slope of the peak exercise ST segment', ['Up', 'Flat', 'Down'])
 
     makeprediction = ""
 
