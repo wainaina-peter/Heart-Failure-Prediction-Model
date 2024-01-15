@@ -62,7 +62,7 @@ def main():
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Go to", ["Prediction Model", "Learn about Heart Failure"])
 
-    if page == "Home":
+    if page == "Prediction Model":
         # Home page content
         st.title('Heart Failure Prediction Model')
 
@@ -107,7 +107,7 @@ def main():
         else:
             st.success('There is no possibility of heart failure.')
             
-    elif page == "Another Page":
+    elif page == "Learn about Heart Failure":
         # Content for another page
         st.title("Learn about Heart Failure")
         st.write("Welcome to another page!")        
