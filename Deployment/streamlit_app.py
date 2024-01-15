@@ -57,47 +57,60 @@ def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler,
 
 def main():
     st.title('Heart Disease Prediction')
+    
+    # Sidebar navigation
+    st.sidebar.title("Navigation")
+    page = st.sidebar.radio("Go to", ["Home", "Another Page"])
 
-    # Input widgets for user input
-    Age = st.number_input('Enter your age', min_value=0, max_value=120, value=25)
-    Sex = st.selectbox('Select your gender', ['Male', 'Female'])
-    ChestPainType = st.selectbox('Select your chest pain type', ['TA', 'ATA', 'NAP', 'ASY'])
-    RestingBP = st.number_input('Enter your resting blood pressure (mm Hg)', min_value=0, value=120)
-    Cholesterol = st.number_input('Enter your cholesterol level (mg/dl)', min_value=0, value=200)
-    FastingBS = st.selectbox('Is your fasting blood sugar > 120 mg/dl?', ['Yes', 'No'])
-    RestingECG = st.selectbox('What is your resting electrocardiographic results?', ['Normal', 'ST-T wave abnormality', 'Left ventricular hypertrophy'])
-    MaxHR = st.number_input('Enter your maximum heart rate', min_value=0, value=150)
-    ExerciseAngina = st.selectbox('Do you experience exercise-induced angina?', ['Yes', 'No'])
-    Oldpeak = st.number_input('Enter your ST depression induced by exercise relative to rest', value=0.0)
-    ST_Slope = st.selectbox('Select your slope of the peak exercise ST segment', ['Up', 'Flat', 'Down'])
+    if page == "Home":
+        # Home page content
+        st.title('Heart Disease Prediction')
 
-    makeprediction = ""
-
-    # Prediction code
-    if st.button('Predict'):
-        # Preprocess the input data
-        input_data = {
-            'Age': Age,
-            'Sex': Sex,
-            'ChestPainType': ChestPainType,
-            'RestingBP': RestingBP,
-            'Cholesterol': Cholesterol,
-            'FastingBS': FastingBS,
-            'RestingECG': RestingECG,
-            'MaxHR': MaxHR,
-            'ExerciseAngina': ExerciseAngina,
-            'Oldpeak': Oldpeak,
-            'ST_Slope': ST_Slope
-        }
-
-        # Make predictions
-        predicted_heart_disease_knn_preprocessed = make_prediction_knn_preprocessed(classifier_KNN, input_data, enc_oe, enc_ohe, scaler, training_data)
-        # st.success('The predicted result is {}'.format(predicted_heart_disease_knn_preprocessed))
-        # Print result based on predicted value
-        if predicted_heart_disease_knn_preprocessed == 1:
-            st.warning('There is a possibility of heart failure.')
+        # Input widgets for user input
+        Age = st.number_input('Enter your age', min_value=0, max_value=120, value=25)
+        Sex = st.selectbox('Select your gender', ['Male', 'Female'])
+        ChestPainType = st.selectbox('Select your chest pain type', ['TA', 'ATA', 'NAP', 'ASY'])
+        RestingBP = st.number_input('Enter your resting blood pressure (mm Hg)', min_value=0, value=120)
+        Cholesterol = st.number_input('Enter your cholesterol level (mg/dl)', min_value=0, value=200)
+        FastingBS = st.selectbox('Is your fasting blood sugar > 120 mg/dl?', ['Yes', 'No'])
+        RestingECG = st.selectbox('What is your resting electrocardiographic results?', ['Normal', 'ST-T wave abnormality', 'Left ventricular hypertrophy'])
+        MaxHR = st.number_input('Enter your maximum heart rate', min_value=0, value=150)
+        ExerciseAngina = st.selectbox('Do you experience exercise-induced angina?', ['Yes', 'No'])
+        Oldpeak = st.number_input('Enter your ST depression induced by exercise relative to rest', value=0.0)
+        ST_Slope = st.selectbox('Select your slope of the peak exercise ST segment', ['Up', 'Flat', 'Down'])
+    
+        makeprediction = ""
+    
+        # Prediction code
+        if st.button('Predict'):
+            # Preprocess the input data
+            input_data = {
+                'Age': Age,
+                'Sex': Sex,
+                'ChestPainType': ChestPainType,
+                'RestingBP': RestingBP,
+                'Cholesterol': Cholesterol,
+                'FastingBS': FastingBS,
+                'RestingECG': RestingECG,
+                'MaxHR': MaxHR,
+                'ExerciseAngina': ExerciseAngina,
+                'Oldpeak': Oldpeak,
+                'ST_Slope': ST_Slope
+            }
+    
+            # Make predictions
+            predicted_heart_disease_knn_preprocessed = make_prediction_knn_preprocessed(classifier_KNN, input_data, enc_oe, enc_ohe, scaler, training_data)
+            # st.success('The predicted result is {}'.format(predicted_heart_disease_knn_preprocessed))
+            # Print result based on predicted value
+            if predicted_heart_disease_knn_preprocessed == 1:
+                st.warning('There is a possibility of heart failure.')
         else:
             st.success('There is no possibility of heart failure.')
+            
+    elif page == "Another Page":
+    # Content for another page
+    st.title("ALearn about Heart Failure")
+    st.write("Welcome to another page!")        
 
 if __name__ == "__main__":
     main()
