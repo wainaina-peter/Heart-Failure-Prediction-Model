@@ -69,15 +69,27 @@ def main():
         # Input widgets for user input
         Age = st.number_input('Enter your age', min_value=0, max_value=120, value=25)
         Sex = st.selectbox('Select your gender', ['Male', 'Female'])
-        ChestPainType = st.selectbox('Select your chest pain type', ['TA', 'ATA', 'NAP', 'ASY'])
+        
+        # Explanation for Chest Pain Types
+        chest_pain_explanations = {
+            'TA': 'Typical Angina - Chest pain or discomfort with a typical pattern, often described as pressure or squeezing.',
+            'ATA': 'Atypical Angina - Chest pain that does not fit the typical patterns of classic angina.',
+            'NAP': 'Non-Anginal Pain - Chest discomfort not related to the heart; may be musculoskeletal or gastrointestinal.',
+            'ASY': 'Asymptomatic - No chest pain or discomfort.'
+        }
+        
+        ChestPainType = st.selectbox('Select your chest pain type', list(chest_pain_explanations.keys()))
+        st.write(chest_pain_explanations.get(ChestPainType, ''))
+        
         RestingBP = st.number_input('Enter your resting blood pressure (mm Hg)', min_value=0, value=120)
         Cholesterol = st.number_input('Enter your cholesterol level (mg/dl)', min_value=0, value=200)
         FastingBS = st.selectbox('Is your fasting blood sugar > 120 mg/dl?', ['Yes', 'No'])
-        RestingECG = st.selectbox('What is your resting electrocardiographic results?', ['Normal', 'ST-T wave abnormality', 'Left ventricular hypertrophy'])
+        RestingECG = st.selectbox('What is your resting electrocardiographic result?', ['Normal', 'ST-T wave abnormality', 'Left ventricular hypertrophy'])
         MaxHR = st.number_input('Enter your maximum heart rate', min_value=0, value=150)
         ExerciseAngina = st.selectbox('Do you experience exercise-induced angina?', ['Yes', 'No'])
         Oldpeak = st.number_input('Enter your ST depression induced by exercise relative to rest', value=0.0)
         ST_Slope = st.selectbox('Select your slope of the peak exercise ST segment', ['Up', 'Flat', 'Down'])
+
     
         makeprediction = ""
     
