@@ -145,8 +145,8 @@ def main():
     
         # Other sources of information
         st.subheader("Other Sources of Information:")
-        st.markdown("[American Heart Association - Heart Failure](https://www.heart.org/en/health-topics/heart-failure)")
-        st.markdown("[Living with Heart Failure - Guide for Your Daily Activities](https://www.mayoclinic.org/diseases-conditions/heart-failure)")     
+        st.markdown("[Heart failure - Symptoms and causes (Mayo Clinic)](https://www.mayoclinic.org/diseases-conditions/heart-failure/symptoms-causes/syc-20373142)")
+        st.markdown("[Living with Heart Failure (HF) - Recovery & Management (British Heart Foundation)](https://www.bhf.org.uk/informationsupport/support/practical-support/living-with-heart-failure)")     
 
 if __name__ == "__main__":
     main()
