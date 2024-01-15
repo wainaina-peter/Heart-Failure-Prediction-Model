@@ -56,15 +56,15 @@ def make_prediction_knn_preprocessed(model, input_data, enc_oe, enc_ohe, scaler,
     return prediction
 
 def main():
-    st.title('Heart Disease Prediction')
+    # st.title('Heart Disease Prediction')
     
     # Sidebar navigation
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["Home", "Another Page"])
+    page = st.sidebar.radio("Go to", ["Prediction Model", "Learn about Heart Failure"])
 
     if page == "Home":
         # Home page content
-        st.title('Heart Disease Prediction')
+        st.title('Heart Failure Prediction Model')
 
         # Input widgets for user input
         Age = st.number_input('Enter your age', min_value=0, max_value=120, value=25)
