@@ -108,9 +108,9 @@ def main():
             st.success('There is no possibility of heart failure.')
             
     elif page == "Another Page":
-    # Content for another page
-    st.title("ALearn about Heart Failure")
-    st.write("Welcome to another page!")        
+        # Content for another page
+        st.title("Learn about Heart Failure")
+        st.write("Welcome to another page!")        
 
 if __name__ == "__main__":
     main()
