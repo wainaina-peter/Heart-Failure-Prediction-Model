@@ -108,9 +108,45 @@ def main():
             st.success('There is no possibility of heart failure.')
             
     elif page == "Learn about Heart Failure":
-        # Content for another page
+        # Content for the "Learn about Heart Failure" page
         st.title("Learn about Heart Failure")
-        st.write("Welcome to another page!")        
+    
+        # Definition of Heart Failure
+        st.header("Definition of Heart Failure")
+        st.write("Heart failure is a condition where the heart is unable to pump blood efficiently, leading to inadequate oxygen supply to the body's tissues.")
+    
+        # Causes of Heart Failure
+        st.header("Causes of Heart Failure")
+        st.write("Common causes include coronary artery disease, high blood pressure, and heart attack.")
+    
+        # Ways to Deal with Heart Failure
+        st.header("Ways to Deal with Heart Failure")
+        st.write("1. Medications\n2. Lifestyle changes\n3. Dietary modifications\n4. Exercise\n5. Regular checkups")
+    
+        # Foods to Eat or Avoid
+        st.header("Foods to Eat or Avoid")
+        st.write("Include heart-healthy foods such as fruits, vegetables, and whole grains. Avoid excessive salt and saturated fats.")
+    
+        # Exercises to Do
+        st.header("Exercises to Do")
+        st.write("Engage in aerobic exercises like walking, swimming, and cycling. Consult your healthcare provider before starting a new exercise routine.")
+    
+        # Checkup Recommendations
+        st.header("Checkup Recommendations")
+        st.write("If at risk for heart failure, it is advisable to have regular checkups. Consult your healthcare provider for personalized recommendations.")
+    
+        # Additional Information and Resources
+        st.header("Additional Information and Resources")
+    
+        # Provide links to educational videos on YouTube
+        st.subheader("Educational Videos on YouTube:")
+        st.markdown("[Understanding Heart Failure - Mayo Clinic](https://www.youtube.com/watch?v=VIDEO_ID)")
+        st.markdown("[Living with Heart Failure - American Heart Association](https://www.youtube.com/watch?v=VIDEO_ID)")
+    
+        # Other sources of information
+        st.subheader("Other Sources of Information:")
+        st.markdown("[American Heart Association - Heart Failure](https://www.heart.org/en/health-topics/heart-failure)")
+        st.markdown("[Mayo Clinic - Heart Failure](https://www.mayoclinic.org/diseases-conditions/heart-failure)")     
 
 if __name__ == "__main__":
     main()
