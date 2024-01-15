@@ -140,13 +140,13 @@ def main():
     
         # Provide links to educational videos on YouTube
         st.subheader("Educational Videos on YouTube:")
-        st.markdown("[Understanding Heart Failure - Mayo Clinic](https://www.youtube.com/watch?v=VIDEO_ID)")
-        st.markdown("[Living with Heart Failure - American Heart Association](https://www.youtube.com/watch?v=VIDEO_ID)")
+        st.markdown("[Understanding Congestive Heart Failure - Alila Medical Media](https://www.youtube.com/watch?v=b3OHSA7Tz7U&pp=ygUZaGVhcnQgZmFpbHVyZSBkb2N1bWVudGFyeQ%3D%3D)")
+        st.markdown("[Living with Heart Failure - Guide for Your Daily Activities](https://www.youtube.com/watch?v=4ZI30tBFLUw&pp=ygUlbGl2aW5nIHdpdGggaGVhcnQgZmFpbHVyZSBkb2N1bWVudGFyeQ%3D%3D)")
     
         # Other sources of information
         st.subheader("Other Sources of Information:")
         st.markdown("[American Heart Association - Heart Failure](https://www.heart.org/en/health-topics/heart-failure)")
-        st.markdown("[Mayo Clinic - Heart Failure](https://www.mayoclinic.org/diseases-conditions/heart-failure)")     
+        st.markdown("[Living with Heart Failure - Guide for Your Daily Activities](https://www.mayoclinic.org/diseases-conditions/heart-failure)")     
 
 if __name__ == "__main__":
     main()
